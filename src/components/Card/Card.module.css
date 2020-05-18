@@ -1,0 +1,62 @@
+.card {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  height: 33px;
+  width: 170px;
+}
+
+.done .cardInner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.cardInner {
+  position: relative;
+  padding: 5px 0;
+  background-color: transparent;
+  width: 170px;
+  height: 33px;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  top: 0;
+  width: 170px;
+  height: 33px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 5px 0;
+}
+
+.cardFront {
+  background-color: transparent;
+  color: black;
+}
+
+.cardBack {
+  background-color: #1BB95E;
+  color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=Card.module.css.map */
